@@ -1,2 +1,4 @@
-# testrest
-simple symphony 3 api
+testrest
+========
+
+A Symfony project created on September 14, 2016, 1:37 pm.

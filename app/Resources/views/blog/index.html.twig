@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<table class="table ">
+  <thead> <tr>
+     <th>id</th>
+    <th>Title</th>
+    <th>Options</th> </tr>
+  </thead>
+    <tbody>
+      {% for post in posts %}
+      <tr>
+
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+         <td>
+           <a href="{{ path('blog/edit', {'blogPost': post.id})}}" class="btn btn-default">Edit</a>
+         </td>
+         <td>
+           <a href="{{ path('blog/delete', {'blogPost': post.id})}}" class="btn btn-danger">Delete</a>
+         </td>
+
+       <tr>
+         {% endfor %}
+      </tbody>
+    </table>
+
+{% endblock body %}
